@@ -1,0 +1,1 @@
+INSERT INTO profiles VALUES (default, "menendez pelayo",18, );
