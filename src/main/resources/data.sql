@@ -1,1 +1,1 @@
-INSERT INTO profiles VALUES (default, "menendez pelayo",18, "Gijon", 53552259, "Gonzalez", "Diego");
+-- INSERT INTO profiles VALUES (default, "menendez pelayo",18, "Gijon", 53552259, "Gonzalez", "Diego");

@@ -9,7 +9,7 @@ public class Profile {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY) @Column(name= "id_profile")
     Long id;
     
-    private int dni_number;
+    private String dni;
     private String name;
     private String lastname;
     private int age;
@@ -21,9 +21,9 @@ public class Profile {
     }
 
 
-    public Profile(Long id, int dni_number, String name, String lastname, int age, String address, String city) {
+    public Profile(Long id, String dni, String name, String lastname, int age, String address, String city) {
         this.id = id;
-        this.dni_number = dni_number;
+        this.dni = dni;
         this.name = name;
         this.lastname = lastname;
         this.age = age;
@@ -42,13 +42,13 @@ public class Profile {
     }
 
 
-    public int getDni_number() {
-        return dni_number;
+    public String getDni() {
+        return dni;
     }
 
 
-    public void setDni_number(int dni_number) {
-        this.dni_number = dni_number;
+    public void setDni(String dni) {
+        this.dni = dni;
     }
 
 
@@ -102,14 +102,6 @@ public class Profile {
     }
 
 
-
-
     
-  
-
-
-   
-
-
 
 }
