@@ -5,20 +5,27 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 import com.factoriaf5.smile.models.Profile;
+import com.factoriaf5.smile.payloads.ProfilePayload;
 import com.factoriaf5.smile.repositories.ProfileRepository;
-
-
-@Service
+ @Service
 public class ProfileService {
+  
     private ProfileRepository repository;
 
-    public ProfileService(ProfileRepository repository){
+    public ProfileService(ProfileRepository repository) {
         this.repository = repository;
     }
-    
 
-    public List<Profile> getAll() {
-        return repository.findAll();
     
-}
-}
+    }
+
+
+
+
+
+
+
+
+
+
+
