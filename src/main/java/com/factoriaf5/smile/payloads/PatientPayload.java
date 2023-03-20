@@ -50,6 +50,11 @@ public class PatientPayload {
     public void setTreatment(List<Treatment> treatment) {
         this.treatment = treatment;
     }
+
+
+    public String getName() {
+        return null;
+    }
     
     
 

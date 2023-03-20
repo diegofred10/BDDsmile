@@ -1,6 +1,5 @@
 package com.factoriaf5.smile.controllers;
 
-
 import java.util.List;
 
 import org.springframework.http.HttpStatus;
@@ -14,32 +13,21 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.factoriaf5.smile.models.Patient;
 import com.factoriaf5.smile.models.Profile;
 import com.factoriaf5.smile.payloads.PatientPayload;
-import com.factoriaf5.smile.services.PatientService;
-
-
-
-
 
 @RestController
-@RequestMapping (path = "/api/patients")
-public class PatientController {
-    private PatientService service;
+@RequestMapping(path = "/api/profiles")
+public class ProfileController {
+    @GetMapping(path = "")
     
-    public PatientController (PatientService service) {
-        this.service = service;
-}
-
-@GetMapping(path = "")
-public List<Patient>getAll(){
+public List<Profile>getAll(){
     return service.getAll();
     
 }
 
-@GetMapping(path = "/{dni}")
-public Patient getOne(@PathVariable String dni){
+@GetMapping(path = "/{id}")
+public Profile getOne(@PathVariable String dni){
     return service.getOne(dni);
 }
 
@@ -55,16 +43,16 @@ public void save(@RequestBody PatientPayload patient){
 // }
 
 
-@DeleteMapping(path = "/{dni}")
-public List<Patient> delete(@PathVariable String dni){
+@DeleteMapping(path = "/{id}")
+public List<Profile> delete(@PathVariable String dni){
     return service.delete(dni);
 }
 
 
 
-@PutMapping(path = "/{dni}")
-public ResponseEntity<Patient> update(@PathVariable String dni, @RequestBody PatientPayload patient){
-    Patient patientTemporal = service.getOne(dni);
+@PutMapping(path = "/{id}")
+public ResponseEntity<Profile> update(@PathVariable String dni, @RequestBody PatientPayload patient){
+    Profile patientTemporal = service.getOne(dni);
 
     try {
         if(patientTemporal !=null){
@@ -77,11 +65,4 @@ public ResponseEntity<Patient> update(@PathVariable String dni, @RequestBody Pat
         return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
     }
-
-}    
-
-
-
-
-
-
+}

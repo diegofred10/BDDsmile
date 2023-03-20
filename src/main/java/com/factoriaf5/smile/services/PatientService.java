@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 import com.factoriaf5.smile.models.Patient;
+import com.factoriaf5.smile.models.Profile;
 import com.factoriaf5.smile.payloads.PatientPayload;
 import com.factoriaf5.smile.repositories.PatientRepository;
 
@@ -35,6 +36,10 @@ public class PatientService {
         repository.delete(patientToDelete);
         return repository.findAll();
     }
+
+    // public void saveProfile(Profile profileToAdd, String dni) {
+    //     Patient newPatientToAdd = new Patient(getDni())
+    // }
 
 
 
